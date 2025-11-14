@@ -1,0 +1,17 @@
+services:
+  nginx:
+    build:
+      context: ../nginx
+    image: nginx:latest
+    ports:
+      - "8082:80"
+  alpine:
+    image: alpine:latest
+    # entrypoint: "ping nginx"
+    entrypoint: "wget http://nginx"
+    depends_on:
+      - nginx
+    #below is the volume mapping to share results
+    working_dir: /app/output
+    volumes:
+      - ./results:/app/output

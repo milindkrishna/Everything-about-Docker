@@ -1,0 +1,7 @@
+services:
+  java_shape:
+    build:
+      context: ../java_docker_shape
+    image: geometric-calculator:latest
+    stdin_open: true
+    tty: true
