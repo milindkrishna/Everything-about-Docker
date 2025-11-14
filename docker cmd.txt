@@ -1,0 +1,82 @@
+docker login
+
+docker ps -> only running containers
+
+docker ps -a -> all containers
+
+docker images
+
+docker container prune -> to delete all container
+
+docker system prune -a -> to delete all in online and offline container and images
+
+docker rmi image_name -> delete images
+
+docker rmi -f image_name -> force delete image
+
+docker pull image_name
+
+docker build -t=milindkrishna/yourimagename . -> build image using docker file
+
+docker build -t=milindkrishna/yourimagename:tag . -> build for modified docker file
+
+docker push image_name
+
+docker stop container_name -> stop container
+
+docker logs container_names -> to check the last ran logs
+
+[docker build -t milindkrishna/yourimagename .
+
+docker-compose run -it java_shape - for one of my compose file]
+
+docker-compose -p milind run -it java_shape [ after prune the system]
+
+docker-compose up -d -> run in background
+
+docker-compose down
+
+docker-compose logs
+
+-------------------------------------------------------------------------------------------
+
+Step inside alpine Linux and same to be written in dockerfile:
+
+apk add openjdk21
+
+vi helloWorld.java
+
+add code and esc :wq to save
+
+ls
+
+cat helloWorld.java
+
+javac helloWorld.java
+
+ls
+
+java helloWorld - to see the result
+
+echo $PATH
+output: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+find / -name javac
+output : 
+/usr/bin/javac
+/usr/lib/jvm/java-21-openjdk/bin/javac
+
+so lastly 
+
+export PATH=$PATH:/usr/lib/jvm/java-21-openjdk/bin/javac
+echo $PATH
+
+============================================================================================
+
+
+if push issues resolve by :
+
+docker login
+docker tag geometric-calculator:latest USERNAME/geometric-calculator:latest
+
+
